@@ -30,7 +30,7 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: 
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
@@ -38,7 +38,7 @@ jobs:
         # https://www.appveyor.com/docs/appveyor-yml
 # https://www.appveyor.com/docs/lang/nodejs-iojs
 
-environment:
+env:
   matrix:
     # node.js
     - nodejs_version: "0.10"
@@ -57,7 +57,7 @@ test_script:
   - npm --version
   - cmd: npm test
 
-build: off
+build: on
 
 # build version format
 version: "{build}"
